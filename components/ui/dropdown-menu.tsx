@@ -8,7 +8,7 @@ interface DropdownMenuProps {
   trigger: React.ReactNode;
 }
 
-export const DropdownMenu = ({ children, trigger }: DropdownMenuProps) => {
+const DropdownMenu = ({ children, trigger }: DropdownMenuProps) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClose = React.useCallback(() => {
@@ -27,14 +27,15 @@ export const DropdownMenu = ({ children, trigger }: DropdownMenuProps) => {
           <div className="absolute z-50 mt-2 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md">
             {React.Children.map(children, (child) => {
               if (React.isValidElement(child)) {
-                return React.cloneElement(child as React.ReactElement<any>, {
+                const childProps = child.props as { onClick?: (e: React.MouseEvent) => void };
+                return React.cloneElement(child as React.ReactElement, {
                   onClick: (e: React.MouseEvent) => {
                     handleClose();
-                    if (child.props.onClick) {
-                      child.props.onClick(e);
+                    if (childProps.onClick) {
+                      childProps.onClick(e);
                     }
                   },
-                });
+                } as React.HTMLAttributes<HTMLElement>);
               }
               return child;
             })}
