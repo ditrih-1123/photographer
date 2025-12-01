@@ -59,6 +59,10 @@ export function Navigation() {
           );
         }
 
+        if (!("href" in item) || !item.href) {
+          return null;
+        }
+
         return (
           <Link
             key={item.href}
