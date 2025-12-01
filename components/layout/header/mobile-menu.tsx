@@ -76,6 +76,10 @@ export function MobileMenu() {
                 );
               }
 
+              if (!item.href) {
+                return null;
+              }
+
               return (
                 <Link
                   key={item.href}
