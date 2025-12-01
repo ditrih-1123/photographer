@@ -1,0 +1,17 @@
+{
+  "title": "Professional Photography",
+  "subtitle": "Capturing moments that last a lifetime",
+  "buttons": [
+    {
+      "label": "View Portfolio",
+      "href": "/portfolio",
+      "variant": "default"
+    },
+    {
+      "label": "Contact Me",
+      "href": "/contact",
+      "variant": "outline"
+    }
+  ],
+  "youtubeUrl": "https://youtu.be/vbTO6KnWNKU"
+}

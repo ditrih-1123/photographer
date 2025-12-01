@@ -1,0 +1,35 @@
+{
+  "logoPath": "/images/Logo.png.webp",
+  "navigationItems": [
+    {
+      "href": "/",
+      "label": "Home"
+    },
+    {
+      "href": "/about",
+      "label": "Über uns"
+    },
+    {
+      "label": "Services",
+      "hasDropdown": true,
+      "items": [
+        {
+          "href": "/services/photography",
+          "label": "Fotografie"
+        },
+        {
+          "href": "/services/videography",
+          "label": "Videografie"
+        },
+        {
+          "href": "/services/editing",
+          "label": "Bildbearbeitung"
+        }
+      ]
+    },
+    {
+      "href": "/contact",
+      "label": "Kontakt"
+    }
+  ]
+}
